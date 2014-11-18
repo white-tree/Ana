@@ -10,10 +10,14 @@
 <body>
 
 
+
 <%
+long StartTime=0; 
+long EndTime=0;
  com.Pickof p=new Pickof();
  		System.out.println("Executing Java Anagram Detection Sequence 1");
-        long StartTime=System.nanoTime();
+ 		
+        StartTime=System.nanoTime();
         for(int i=0;i<1000000;i++) {
             System.out.println(p.anagramSolution("heart", "earth"));
             System.out.println(p.anagramSolution("printer", "reprint"));
@@ -26,8 +30,9 @@
             System.out.println(p.anagramSolution("oriental", "relation"));
             System.out.println(p.anagramSolution("sunlight", "hustling"));
         }
-        long EndTime=System.nanoTime();
+        EndTime=System.nanoTime();
         %>
-        <%= (((EndTime-StartTime)/100000000)/60.0)%>
+        
+        <%=(((EndTime-StartTime)/100000000)/60.0)%>
         </body>
 </html>
